@@ -20,9 +20,10 @@ contract EventFactory {
             _eventDate
         );
 
-        cloneCount++;
+        uint id = cloneCount++;
 
-        clones[cloneCount] = newEvent;
+        clones[id] = newEvent;
+        cloneCount++;
         return newEvent;
     }
 
